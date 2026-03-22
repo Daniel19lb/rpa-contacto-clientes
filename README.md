@@ -22,16 +22,13 @@ Sistema de automatización RPA (Robotic Process Automation) desarrollado en Pyth
 rpa-contacto-clientes/
 │
 ├── scripts/
-│   ├── claro_hogar.py              → Campaña CLARO Internet Hogar
-│   ├── bitel_fibra_hogar.py        → Campaña BITEL Fibra Hogar (monitor principal)
-│   ├── bitel_fibra_hogar_anydesk.py → Campaña BITEL Fibra Hogar (monitor reducido)
+│   ├── bitel_fibra_hogar.py        → Campaña BITEL Fibra Hogar
 │   ├── bitel_linea_adicional.py    → Campaña BITEL Línea Adicional
-│   ├── bitel_portabilidad.py       → Campaña BITEL Portabilidad (monitor principal)
-│   ├── bitel_portabilidad_anydesk.py → Campaña BITEL Portabilidad (monitor reducido)
+│   ├── bitel_portabilidad.py       → Campaña BITEL Portabilidad
 │   ├── bitel_recontacto_leads.py   → Re-contacto leads con mensaje por plan
-│   ├── win_hogar.py                → Campaña WIN Internet Hogar (monitor principal)
-│   ├── win_hogar_anydesk.py        → Campaña WIN Internet Hogar (monitor reducido)
-│   └── wow_hogar_anydesk.py        → Campaña WOW Internet Hogar (monitor reducido)
+│   ├── claro_hogar.py              → Campaña CLARO Internet Hogar
+│   ├── win_hogar.py                → Campaña WIN Internet Hogar
+│   └── wow_hogar.py                → Campaña WOW Internet Hogar
 │
 └── data/
     ├── base_sample.xlsx            → Base de contactos de ejemplo (números ficticios)
@@ -50,13 +47,9 @@ pip install pandas pyautogui openpyxl
 
 En cada script ajusta estas dos constantes según tu entorno:
 ```python
-BASE_PATH = "../data/base_sample.xlsx"  # Ruta a tu base de contactos
+BASE_PATH = "../data/base_sample.xlsx"  # Ruta a tu base de contactos (incluido en la variable "data")
 CHROME_PATH = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
 ```
-
-## 📊 Variantes AnyDesk
-
-Los scripts con sufijo `_anydesk` tienen coordenadas de clicks ajustadas para monitores de menor resolución — útil cuando se ejecuta remotamente via AnyDesk.
 
 ## ⚠️ Nota
 
